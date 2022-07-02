@@ -1,0 +1,454 @@
+<html>
+    <head>
+      <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
+
+      <style>
+            body
+                  {
+                          background-color:darkgreen;
+                          background-image:url("http://cheerspokernh.com/wp-content/uploads/2018/02/bigstock-poker-table-background-26587844-2-1.jpg");
+                          background-size:cover;
+                          font-family: Antic;
+                  }
+            a
+                  {
+                          color:darkred; 
+                  }
+            form
+                  {
+                          font-size:30px;
+                          text-align:center;
+                          color:white;
+                  }
+
+
+            .slot
+                  {
+                        font-size:50px;
+                  }
+
+            .b1
+                  {
+                        padding:15px 15px 15px 15px;
+                        margin: 15px 15px 15px 15px;
+                        background-color:darkred;
+                        color:white;
+                        font-size:40px;
+                        font-family: Antic;
+                  }
+
+
+            table, th, td
+                  {
+                        border: 2px solid black;
+                        padding:10px 10px 10px 30px;
+                        border-collapse: collapse;
+                        background-color:lightgrey;
+                  }
+      </style>
+    </head>
+    <body>
+
+
+
+        <script type="text/javascript">
+            function rolladice1()
+            {
+                //this is rolling a number for the die
+                var dicenum1 = Math.ceil(Math.random()*6);
+
+                var dicenum2 = Math.ceil(Math.random()*6);
+
+                var dicenum3 = Math.ceil(Math.random()*6);
+
+                var dicenum4 = Math.ceil(Math.random()*6);
+
+                var dicenum5 = Math.ceil(Math.random()*6);
+
+
+
+                //this is for the spans
+                var slot1 = document.getElementById("slot1");
+
+                var slot2 = document.getElementById("slot2");
+
+                var slot3 = document.getElementById("slot3");
+
+                var slot4 = document.getElementById("slot4");
+
+                var slot5 = document.getElementById("slot5");
+
+                //this is for the saved dice
+                var save1 = document.getElementById("save1").checked;
+                var saved1 = 0;
+
+                var save2 = document.getElementById("save2").checked;
+                var saved2 = 0;
+
+                var save3 = document.getElementById("save3").checked;
+                var saved3 = 0;
+
+                var save4 = document.getElementById("save4").checked;
+                var saved4 = 0;
+
+                var save5 = document.getElementById("save5").checked;
+                var saved5 = 0;
+
+                //this is to make the dice the same size as the box
+                document.getElementById("slot1").style.fontSize="63px";
+                document.getElementById("slot2").style.fontSize="63px";
+                document.getElementById("slot3").style.fontSize="63px";
+                document.getElementById("slot4").style.fontSize="63px";
+                document.getElementById("slot5").style.fontSize="63px";
+
+                //this is a bunch of if statement to roll dice
+
+                //dice 1
+                if (save1==true) { //if dice is saved
+                        if (saved1==1){
+                          slot1.innerHTML = "⚀";
+                        } else if (saved1==2) {
+                          slot1.innerHTML = "⚁";
+                        } else if (saved1==3) {
+                          slot1.innerHTML = "⚂";
+                        } else if (saved1==4) {
+                          slot1.innerHTML = "⚃";
+                        } else if (saved1==5) {
+                          slot1.innerHTML = "⚄";
+                        } else if (saved1==6) {
+                          slot1.innerHTML = "⚅";
+                        }
+                } else { //if dice is rolled (again)
+                        if (dicenum1==1){
+                          slot1.innerHTML = "⚀";
+                          saved1 = 1;
+
+                        } else if (dicenum1==2) {
+                          slot1.innerHTML = "⚁";
+                          saved1 = 2;
+
+                        } else if (dicenum1==3) {
+                          slot1.innerHTML = "⚂";
+                          saved1 = 3;
+                        } else if (dicenum1==4) {
+                          slot1.innerHTML = "⚃";
+                          saved1 = 4;
+                        } else if (dicenum1==5) {
+                          slot1.innerHTML = "⚄";
+                          saved1 = 5;
+                        } else if (dicenum1==6) {
+                          slot1.innerHTML = "⚅";
+                          saved1 = 6;
+                        }
+                }
+
+                //dice 2
+                if (save2==true) { //if dice is saved
+                        if (saved2==1){
+                          slot2.innerHTML = "⚀";
+                        } else if (saved2==2) {
+                          slot2.innerHTML = "⚁";
+                        } else if (saved2==3) {
+                          slot2.innerHTML = "⚂";
+                        } else if (saved2==4) {
+                          slot2.innerHTML = "⚃";
+                        } else if (saved2==5) {
+                          slot2.innerHTML = "⚄";
+                        } else if (saved2==6) {
+                          slot2.innerHTML = "⚅";
+                        }
+                } else { //if dice is rolled (again)
+                        if (dicenum2==1){
+                          slot2.innerHTML = "⚀";
+                          saved2 = 1;
+                        } else if (dicenum2==2) {
+                          slot2.innerHTML = "⚁";
+                          saved2 = 2;
+                        } else if (dicenum2==3) {
+                          slot2.innerHTML = "⚂";
+                          saved2 = 3;
+                        } else if (dicenum2==4) {
+                          slot2.innerHTML = "⚃";
+                          saved2 = 4;
+                        } else if (dicenum2==5) {
+                          slot2.innerHTML = "⚄";
+                          saved2 = 5;
+                        } else if (dicenum2==6) {
+                          slot2.innerHTML = "⚅";
+                          saved2 = 6;
+                        }
+                }
+
+                //dice 3
+                if (save3==true) { //if dice is saved
+                        if (saved3==1){
+                          slot3.innerHTML = "⚀";
+                        } else if (saved3==2) {
+                          slot3.innerHTML = "⚁";
+                        } else if (saved3==3) {
+                          slot3.innerHTML = "⚂";
+                        } else if (saved3==4) {
+                          slot3.innerHTML = "⚃";
+                        } else if (saved3==5) {
+                          slot3.innerHTML = "⚄";
+                        } else if (saved3==6) {
+                          slot3.innerHTML = "⚅";
+                        }
+                } else { //if dice is rolled (again)
+                        if (dicenum3==1){
+                          slot3.innerHTML = "⚀";
+                          saved3 = 1;
+                        } else if (dicenum3==2) {
+                          slot3.innerHTML = "⚁";
+                          saved3 = 2;
+                        } else if (dicenum3==3) {
+                          slot3.innerHTML = "⚂";
+                          saved3 = 3;
+                        } else if (dicenum3==4) {
+                          slot3.innerHTML = "⚃";
+                          saved3 = 4;
+                        } else if (dicenum3==5) {
+                          slot3.innerHTML = "⚄";
+                          saved3 = 5;
+                        } else if (dicenum3==6) {
+                          slot3.innerHTML = "⚅";
+                          saved3 = 6;
+                        }
+                }
+
+                //dice 4
+                if (save4==true) { //if dice is saved
+                        if (saved4==1){
+                          slot4.innerHTML = "⚀";
+                        } else if (saved4==2) {
+                          slot4.innerHTML = "⚁";
+                        } else if (saved4==3) {
+                          slot4.innerHTML = "⚂";
+                        } else if (saved4==4) {
+                          slot4.innerHTML = "⚃";
+                        } else if (saved4==5) {
+                          slot4.innerHTML = "⚄";
+                        } else if (saved4==6) {
+                          slot4.innerHTML = "⚅";
+                        }
+                } else { //if dice is rolled (again)
+                        if (dicenum4==1){
+                          slot4.innerHTML = "⚀";
+                          saved4 = 1;
+                        } else if (dicenum4==2) {
+                          slot4.innerHTML = "⚁";
+                          saved4 = 2;
+                        } else if (dicenum4==3) {
+                          slot4.innerHTML = "⚂";
+                          saved4 = 3;
+                        } else if (dicenum4==4) {
+                          slot4.innerHTML = "⚃";
+                          saved4 = 4;
+                        } else if (dicenum4==5) {
+                          slot4.innerHTML = "⚄";
+                          saved4 = 5;
+                        } else if (dicenum4==6) {
+                          slot4.innerHTML = "⚅";
+                          saved4 = 6;
+                        }
+                }
+
+                //dice 5
+                if (save5==true) { //if dice is saved
+                        if (saved5==1){
+                          slot5.innerHTML = "⚀";
+                        } else if (saved5==2) {
+                          slot5.innerHTML = "⚁";
+                        } else if (saved5==3) {
+                          slot5.innerHTML = "⚂";
+                        } else if (saved5==4) {
+                          slot5.innerHTML = "⚃";
+                        } else if (saved5==5) {
+                          slot5.innerHTML = "⚄";
+                        } else if (saved5==6) {
+                          slot5.innerHTML = "⚅";
+                        }
+                } else { //if dice is rolled (again)
+                        if (dicenum5==1){
+                          slot5.innerHTML = "⚀";
+                          saved5 = 1;
+                        } else if (dicenum5==2) {
+                          slot5.innerHTML = "⚁";
+                          saved5 = 2;
+                        } else if (dicenum5==3) {
+                          slot5.innerHTML = "⚂";
+                          saved5 = 3;
+                        } else if (dicenum5==4) {
+                          slot5.innerHTML = "⚃";
+                          saved5 = 4;
+                        } else if (dicenum5==5) {
+                          slot5.innerHTML = "⚄";
+                          saved5 = 5;
+                        } else if (dicenum5==6) {
+                          slot5.innerHTML = "⚅";
+                          saved5 = 6;
+                        }
+                }
+
+            }
+
+            function checkthedice() {
+
+                var aces = document.getElementById("u11").value;
+                var twos = document.getElementById("u21").value;
+                var threes = document.getElementById("u31").value;
+                var fours = document.getElementById("u41").value;
+                var fives = document.getElementById("u51").value;
+                var sixes = document.getElementById("u61").value;
+
+
+                var triples = document.getElementById("l11").value;
+                var quads = document.getElementById("l21").value;
+                var fullhouse = document.getElementById("l31").value;
+                var smallstr = document.getElementById("l41").value;
+                var longstr = document.getElementById("l51").value;
+                var yahtzeee = document.getElementById("l61").value;
+                var chances = document.getElementById("l71").value;
+
+                var uppertot = 0;
+                var upper1thru6 = aces+twos+threes+fours+fives+sixes;
+
+                if (upper1thru6>=63) {
+                  uppertot = upper1thru6+35;
+                } else {
+                  uppertot = upper1thru6;
+                }
+
+                var lowertot = triples+quads+fullhouse+smallstr+longstr+yahtzeee+chances;
+
+                var score = lowertot+uppertot;
+
+                alert("You rolled a " + score + "!");
+
+            }
+
+
+
+
+        </script>
+
+
+        <form>
+          <h1>Welcome to Yahtzee!</h1>
+           Press the button to roll the dice and get started. <br>
+           To learn the rules of Yahtzee, click <a href=http://www.yahtzee.org.uk>here.</a> <br>
+           <input type=button id="button" class="b1" value="Roll The Dice!" onclick="rolladice1();"> <br>
+           Save the 1st die  <input type=checkbox id=save1><span id=slot1 class="slot">☐</span> <br>
+
+           Save the 2nd die  <input type=checkbox id=save2><span id=slot2 class="slot">☐</span> <br>
+
+           Save the 3rd die  <input type=checkbox id=save3><span id=slot3 class="slot">☐</span> <br>
+
+           Save the 4th die  <input type=checkbox id=save4><span id=slot4 class="slot">☐</span> <br>
+
+           Save the 5th die  <input type=checkbox id=save5><span id=slot5 class="slot">☐</span> <br>
+
+
+        </form>
+
+        <br><br><br><br><br>
+
+
+       <div id="chart1"><!--Milan--><!--two tables, 8 by 10, of text/text boxes  -->
+         <table style="width:80% inherit" align="center"> <!-- can also do auto width (instead of inherit but this looks better-->
+              <tr>
+                <th>Minnimum Requirement For Bonus</th>
+                <th>How to Score</th>
+                <th>Game #1</th>
+              </tr>
+              <tr> <!-- row 1 -->
+                <td>Aces</td>
+                <td>Count and <br>add only<br>Aces</td>
+                <td><input type="text" id=u11></td>
+              </tr>
+              <tr><!-- row 2 -->
+                <td>Twos</td>
+                <td>Count and <br>add only<br>Twos</td>
+                <td><input type="text" id=u21></td>
+              </tr>
+              <tr><!-- row 3 -->
+                <td>Threes</td>
+                <td>Count and <br>add only<br>Threes</td>
+                <td><input type="text" id=u31></td>
+              </tr>
+              <tr><!-- row 4 -->
+                <td>Fours</td>
+                <td>Count and <br>add only<br>Fours</td>
+                <td><input type="text" id=u41></td>
+              </tr>
+              <tr><!-- row 5 -->
+                <td>Fives</td>
+                <td>Count and <br>add only<br>Fives</td>
+                <td><input type="text" id=u51</td>
+              </tr>
+              <tr><!-- row 6 -->
+                <td>Sixes</td>
+                <td>Count and <br>add only<br>Sixes</td>
+                <td><input type="text" id=u61></td>
+              </tr>
+              <tr><!-- row 8 SPAN-->
+                <td>Bonus if 63 or over</td>
+                <td>Score<br>35</td>
+                <td id="bonus63overg1"></td>
+              </tr>
+          </table>
+
+              <br>
+
+          <table style="width:80% inherit" align="center"> <!-- can also do auto width but this looks better-->
+              <tr>
+                <th>Minnimum Requirement For Bonus</th>
+                <th>How to Score</th>
+                <th>Game #1</th>
+              </tr>
+              <tr> <!-- row 1 -->
+                <td>3 of a kind</td>
+                <td>Add total <br>of all dice</td>
+                <td><input type="text" id=l11></td>
+              </tr>
+              <tr><!-- row 2 -->
+                <td>4 of a kind</td>
+                <td>Add total <br>of all dice</td>
+                <td><input type="text" id=l21></td>
+              </tr>
+              <tr><!-- row 3 -->
+                <td>Full House</td>
+                <td>Score<br>25</td>
+                <td><input type="text" id=l31></td>
+              </tr>
+              <tr><!-- row 4 -->
+                <td>Sm. Straight (Sequence of 4)</td>
+                <td>Score<br>30</td>
+                <td><input type="text" id=l41></td>
+              </tr>
+              <tr><!-- row 5 -->
+                <td>Lg. Straight (Sequence of 5)</td>
+                <td>Score<br>40</td>
+                <td><input type="text" id=l51></td>
+              </tr>
+              <tr><!-- row 6 -->
+                <td>YAHTZEE (5 of a kind)</td>
+                <td>Score<br>50</td>
+                <td><input type="text" id=l61></td>
+              </tr>
+              <tr><!-- row 7 -->
+                <td>Chance</td>
+                <td>SCORE<BR>TOTAL OF<BR>ALL 5 DICE</td>
+                <td><input type="text" id=l71></td>
+              </tr>
+              <tr>
+                <td><input type=button id="submitbutton" class="b1" value="Submit Your Dice!" onclick="checkthedice();"></td>
+                <td></td>
+                <td></td>
+              </tr>
+          </table>
+       </div>
+
+       <p style="color: white" align="center">Copyright 2019 Allison Kim, Alexander Masoudi, and Milan Gandhi. All rights reserved.</p>
+    </body>
+</html>
